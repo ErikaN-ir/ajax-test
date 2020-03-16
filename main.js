@@ -12,6 +12,8 @@ function getData(cb) { /*cb is the argument of getData*/
     };
 };
 
-getData(function(data) { /*data is the name of the arguement of cb*/
+function printDataToConsole(data) { /*data is argument fed as a result of getData*/
     console.log(data);
-});
+}
+
+getData(printDataToConsole); /*feeding cb into this print function as an argument*/
