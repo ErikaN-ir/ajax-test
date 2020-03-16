@@ -10,10 +10,10 @@ xhr.send();
 
 function setData(jsonData) {
     data = jsonData;
-    console.log(data);
-};
+}
 
 xhr.onreadystatechange = function() {
+    console.log(this.readyState);
     if (this.readyState == 4 && this.status == 200) { 
         /*xhr object has various states while being performed
         4 means it's been completed
@@ -27,3 +27,8 @@ xhr.onreadystatechange = function() {
         /*response text is a string unless parsed*/
     }
 };
+
+setTimeout(function() {
+    console.log(data);
+}, 1000);
+/* 500 - time in milliseconds that we want our programme to wait for*/
