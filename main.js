@@ -32,4 +32,4 @@ xhr.onreadystatechange = function() {
 setTimeout(function() {
     console.log(data);
 }, 1000);
-/* 500 - time in milliseconds that we want our programme to wait for*/
+/* 1000 - time in milliseconds that we want our programme to wait for*/
