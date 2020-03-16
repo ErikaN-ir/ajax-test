@@ -8,18 +8,19 @@ xhr.open("GET", "https://swapi.co/api/");
 xhr.send();
 /*send - sends the request*/
 
-function setData(jsonData) {
+/*function setData(jsonData) {
     data = jsonData;
-}
+}*/
 
 xhr.onreadystatechange = function() {
-    console.log(this.readyState);
     if (this.readyState == 4 && this.status == 200) { 
         /*xhr object has various states while being performed
         4 means it's been completed
         status of 2 - means content delivered*/
 
-        setData(JSON.parse(this.responseText));
+        data = JSON.parse(this.responseText);
+
+        /*setData(JSON.parse(this.responseText));*/
 
         /*document.getElementById("data").innerHTML = this.responseText;*/
         /*the responseText that comesback from the xhr object*/
